@@ -94,11 +94,14 @@ try {
     Write-Host "  Готово"
     Write-Host "========================================"
     Write-Host ""
-    Write-Host "1) Иконка MyClipboard должна появиться в трее (возле часов)."
-    Write-Host "2) Проверка: скопируйте текст → Ctrl+Shift+V."
+    Write-Host "Что дальше:"
+    Write-Host "  1. Иконка в трее возле часов (стрелка ▲, если свёрнуто)"
+    Write-Host "  2. Скопируйте текст → Ctrl+Shift+V"
+    Write-Host "  3. Если SmartScreen — Подробнее → Выполнить в любом случае"
     Write-Host ""
-    Write-Host "Инструкция: https://github.com/$Repo/blob/main/INSTALL.md"
-    Write-Host "Обновить позже — снова эта же команда в PowerShell."
+    Write-Host "Схема и подробности:"
+    Write-Host "  https://github.com/$Repo/blob/main/INSTALL.md"
+    Write-Host "Обновить позже — снова эта же команда."
     Write-Host ""
 }
 finally {
