@@ -1,4 +1,4 @@
-## Установка
+## Установка (рекомендуется)
 
 ### macOS
 
@@ -17,3 +17,16 @@ irm https://raw.githubusercontent.com/Lucem-afferens/MyClipboard-dist/main/insta
 Трей → **Ctrl+Shift+V**.
 
 Пошагово со схемами: [INSTALL.md](https://github.com/Lucem-afferens/MyClipboard-dist/blob/main/INSTALL.md)
+
+---
+
+## Если ставите вручную из Assets
+
+В релизе **два** ZIP — скачайте **только один**, под свою систему. Оба качать не нужно.
+
+| Ваша система | Файл |
+|--------------|------|
+| **Mac** | `MyClipboard-…-macOS.zip` |
+| **Windows** | `MyClipboard-…-windows-x64.zip` |
+
+Дальше: Mac — `.app` в Программы; Windows — запустить `MyClipboard.exe` из архива.

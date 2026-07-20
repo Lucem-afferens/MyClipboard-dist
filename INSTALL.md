@@ -38,10 +38,13 @@ curl -fsSL https://raw.githubusercontent.com/Lucem-afferens/MyClipboard-dist/mai
 <details>
 <summary>Установка мышкой (без Терминала)</summary>
 
-1. [Releases](https://github.com/Lucem-afferens/MyClipboard-dist/releases) → `MyClipboard-…-macOS.zip`
-2. Перетащите `.app` в **Программы**
-3. Правый клик → **Открыть** → **Открыть**
-4. Универсальный доступ — как выше
+1. Откройте [Releases](https://github.com/Lucem-afferens/MyClipboard-dist/releases)
+2. В **Assets** скачайте **только** файл с **`macOS`** в имени:  
+   `MyClipboard-…-macOS.zip`  
+   Файл `…-windows-x64.zip` — для Windows, на Mac он не нужен.
+3. Распакуйте → перетащите `MyClipboard.app` в **Программы**
+4. Правый клик → **Открыть** → **Открыть**
+5. Универсальный доступ — как выше
 
 </details>
 
@@ -94,8 +97,11 @@ Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
 <details>
 <summary>Установка из ZIP</summary>
 
-1. [Releases](https://github.com/Lucem-afferens/MyClipboard-dist/releases) → `MyClipboard-…-windows-x64.zip`
-2. Распакуйте и запустите `MyClipboard.exe`
+1. Откройте [Releases](https://github.com/Lucem-afferens/MyClipboard-dist/releases)
+2. В **Assets** скачайте **только** файл с **`windows-x64`** в имени:  
+   `MyClipboard-…-windows-x64.zip`  
+   Файл `…-macOS.zip` — для Mac, на Windows он не нужен.
+3. Распакуйте и запустите `MyClipboard.exe`
 
 </details>
 

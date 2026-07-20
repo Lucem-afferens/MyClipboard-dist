@@ -24,6 +24,8 @@ irm https://raw.githubusercontent.com/Lucem-afferens/MyClipboard-dist/main/insta
 
 Наглядно, со схемами: **[INSTALL.md](INSTALL.md)** · [Releases](https://github.com/Lucem-afferens/MyClipboard-dist/releases)
 
+В Releases два ZIP — нужен **один**: `…-macOS.zip` или `…-windows-x64.zip`. Оба качать не надо.
+
 | | |
 |--|--|
 | macOS | 14+ |
