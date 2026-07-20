@@ -1,8 +1,14 @@
-# Установка MyClipboard на macOS
+# Установка MyClipboard
 
-## Быстрый старт
+Скрипт установки определяет ОС и ставит нужную сборку. Если открыть «чужую» команду — покажет правильную для вашей системы.
 
-Открой **Терминал** на Mac, вставь это и нажми Enter:
+---
+
+## macOS
+
+### Быстрый старт
+
+Открой **Терминал**, вставь и нажми Enter:
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/Lucem-afferens/MyClipboard-dist/main/install.sh | bash
@@ -10,37 +16,50 @@ curl -fsSL https://raw.githubusercontent.com/Lucem-afferens/MyClipboard-dist/mai
 
 Потом: **Системные настройки** → **Конфиденциальность и безопасность** → **Универсальный доступ** → включи **MyClipboard**.
 
-Проверка: скопируй любой текст → нажми **⌘⌥V** → **Enter**.
+Проверка: скопируй текст → **⌘⌥V** → **Enter**.
 
-Чтобы обновить приложение позже — снова та же команда в Терминале.
+Обновление — снова та же команда.
 
----
+### Вручную
 
-## Если не хотите Терминал
-
-1. Откройте [Releases](https://github.com/Lucem-afferens/MyClipboard-dist/releases).
-2. Скачайте архив `MyClipboard-….zip`.
-3. Распакуйте и перетащите **MyClipboard.app** в папку **Программы**.
-4. **Правый клик** по приложению → **Открыть** → снова **Открыть**.
-5. Выдайте Универсальный доступ (как выше).
-
-Если macOS пишет, что приложение нельзя открыть — используйте команду из раздела «Быстрый старт».
+1. [Releases](https://github.com/Lucem-afferens/MyClipboard-dist/releases) → файл `MyClipboard-…-macOS.zip`
+2. Распакуйте → перетащите **MyClipboard.app** в **Программы**
+3. Правый клик → **Открыть** → **Открыть**
+4. Универсальный доступ — как выше
 
 ---
 
-## Универсальный доступ
+## Windows
 
-Без этого разрешения приложение может копировать в буфер, но не вставит текст в другие программы автоматически.
+### Быстрый старт
 
-1. **Системные настройки** → **Конфиденциальность и безопасность** → **Универсальный доступ**.
-2. Если MyClipboard уже в списке — нажмите **−**, затем **+** и снова выберите  
-   `Программы` → `MyClipboard`.
-3. Включите тумблер.
-4. Скопируйте текст → **⌘⌥V** → **Enter**.
+Открой **PowerShell**, вставь и нажми Enter:
+
+```powershell
+irm https://raw.githubusercontent.com/Lucem-afferens/MyClipboard-dist/main/install.ps1 | iex
+```
+
+Проверка: скопируй текст → **Ctrl+Shift+V**.
+
+Обновление — снова та же команда.
+
+Если PowerShell ругается на политику скриптов:
+
+```powershell
+Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
+```
+
+затем снова команду установки.
+
+### Вручную
+
+1. [Releases](https://github.com/Lucem-afferens/MyClipboard-dist/releases) → `MyClipboard-…-windows-x64.zip`
+2. Распакуйте папку в удобное место (или `%LocalAppData%\Programs\MyClipboard`)
+3. Запустите **MyClipboard.exe**
 
 ---
 
 ## Требования
 
-- macOS 14 (Sonoma) или новее
-- Интернет для первой установки
+- **macOS:** 14+
+- **Windows:** 10/11 x64 (отдельный .NET SDK не нужен — сборка self-contained)

@@ -1,6 +1,6 @@
 ## Установка
 
-Открой **Терминал** на Mac, вставь это и нажми Enter:
+### macOS — Терминал
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/Lucem-afferens/MyClipboard-dist/main/install.sh | bash
@@ -8,13 +8,17 @@ curl -fsSL https://raw.githubusercontent.com/Lucem-afferens/MyClipboard-dist/mai
 
 Потом: **Системные настройки** → **Конфиденциальность** → **Универсальный доступ** → включи **MyClipboard**.
 
+### Windows — PowerShell
+
+```powershell
+irm https://raw.githubusercontent.com/Lucem-afferens/MyClipboard-dist/main/install.ps1 | iex
+```
+
+---
+
 Полная инструкция: [INSTALL.md](https://github.com/Lucem-afferens/MyClipboard-dist/blob/main/INSTALL.md)
 
-### Вручную
+В релизе два файла:
 
-1. Скачайте ZIP ниже  
-2. Перетащите `.app` в **Программы**  
-3. Правый клик → **Открыть** → **Открыть**  
-4. Универсальный доступ — как выше  
-
-Обновление: снова команда в Терминале.
+- `MyClipboard-…-macOS.zip`
+- `MyClipboard-…-windows-x64.zip`

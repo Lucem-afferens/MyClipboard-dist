@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Установка MyClipboard с публичного канала релизов.
+# Установка MyClipboard (macOS) с публичного канала релизов.
 #
 #   curl -fsSL https://raw.githubusercontent.com/Lucem-afferens/MyClipboard-dist/main/install.sh | bash
 #
@@ -18,6 +18,17 @@ echo "║   MyClipboard — установка                ║"
 echo "╚══════════════════════════════════════════╝"
 echo ""
 
+OS="$(uname -s 2>/dev/null || echo unknown)"
+if [[ "$OS" != "Darwin" ]]; then
+  echo "Эта команда для macOS."
+  echo ""
+  echo "На Windows откройте PowerShell и выполните:"
+  echo "  irm https://raw.githubusercontent.com/${REPO}/main/install.ps1 | iex"
+  echo ""
+  echo "Инструкция: https://github.com/${REPO}/blob/main/INSTALL.md"
+  exit 1
+fi
+
 if [[ ! -w "$DEST" ]]; then
   DEST="$HOME/Applications"
   mkdir -p "$DEST"
@@ -26,29 +37,40 @@ else
   echo "→ Установка в $DEST"
 fi
 
-echo "→ Ищу последнюю сборку…"
+echo "→ Ищу сборку для macOS…"
 ZIP_URL="$(
-  curl -fsSL "${API}?per_page=15" | python3 -c '
+  curl -fsSL "${API}?per_page=20" | python3 -c '
 import json, sys
 releases = json.load(sys.stdin)
+
+def pick(assets, predicate):
+    for a in assets:
+        name = a.get("name") or ""
+        if predicate(name):
+            return a["browser_download_url"]
+    return None
+
 for rel in releases:
-    for asset in rel.get("assets") or []:
-        name = asset.get("name") or ""
-        if name.endswith(".zip") and "MyClipboard" in name:
-            print(asset["browser_download_url"])
-            raise SystemExit(0)
+    assets = rel.get("assets") or []
+    url = pick(assets, lambda n: n.endswith(".zip") and "macOS" in n and "MyClipboard" in n)
+    if url:
+        print(url); raise SystemExit(0)
+    # совместимость со старым именем MyClipboard-0.1.0.zip
+    url = pick(assets, lambda n: n.endswith(".zip") and "MyClipboard" in n and "windows" not in n.lower())
+    if url:
+        print(url); raise SystemExit(0)
 raise SystemExit(1)
 ' 2>/dev/null || true
 )"
 
 if [[ -z "${ZIP_URL:-}" ]]; then
   echo ""
-  echo "✗ Установочный файл пока недоступен."
+  echo "✗ Сборка для macOS пока недоступна."
   echo "  https://github.com/${REPO}/releases"
   exit 1
 fi
 
-ZIP_FILE="$TMP/MyClipboard.zip"
+ZIP_FILE="$TMP/MyClipboard-macOS.zip"
 echo "→ Скачиваю…"
 echo "  $ZIP_URL"
 curl -fL --progress-bar -o "$ZIP_FILE" "$ZIP_URL"
