@@ -1,6 +1,6 @@
 # Установка MyClipboard
 
-Одна команда → иконка в системе → одно разрешение (на Mac) → горячая клавиша.
+**Одна команда — самый быстрый и простой способ.** Ниже — по шагам; ZIP — альтернатива, если Терминал / PowerShell не хотите.
 
 ---
 
@@ -8,7 +8,7 @@
 
 ![Три шага: Терминал → Menu Bar → Универсальный доступ](guides/macos-steps.png)
 
-### 1. Установите
+### Рекомендуется: одна команда
 
 Откройте **Терминал**, вставьте и нажмите Enter:
 
@@ -16,44 +16,33 @@
 curl -fsSL https://raw.githubusercontent.com/Lucem-afferens/MyClipboard-dist/main/install.sh | bash
 ```
 
-### 2. Найдите иконку
+### Дальше
 
-Справа вверху в **Menu Bar** (рядом с часами). В Dock иконки **нет** — так и задумано. Иногда спрятана за **›**.
-
-### 3. Разрешите вставку
-
-**Системные настройки** → **Конфиденциальность и безопасность** → **Универсальный доступ** → включите **MyClipboard**.
-
-### 4. Проверьте
-
-Скопируйте текст → **⌘⌥V** → **Enter**.
+1. Иконка в **Menu Bar** справа вверху (в Dock её нет). Иногда спрятана за **›**.
+2. **Системные настройки** → **Конфиденциальность и безопасность** → **Универсальный доступ** → включите **MyClipboard**.
+3. Скопируйте текст → **⌘⌥V** → **Enter**.
 
 | Клавиши | Действие |
 |---------|----------|
 | **⌘⌥V** | Панель истории |
 | **⌘⇧V** | Быстрый цикл (отпустите — вставка) |
 
-Обновление — снова та же команда в Терминале.
+Обновление — снова та же команда.
 
-<details>
-<summary>Установка мышкой (без Терминала)</summary>
+### Альтернатива: ZIP без Терминала
 
-1. Откройте [Releases](https://github.com/Lucem-afferens/MyClipboard-dist/releases)
-2. В **Assets** скачайте **только** файл с **`macOS`** в имени:  
-   `MyClipboard-…-macOS.zip`  
-   Файл `…-windows-x64.zip` — для Windows, на Mac он не нужен.
+1. [Releases](https://github.com/Lucem-afferens/MyClipboard-dist/releases) → **Assets**
+2. Скачайте **только** `MyClipboard-…-macOS.zip` (файл `…-windows-x64.zip` на Mac не нужен)
 3. Распакуйте → перетащите `MyClipboard.app` в **Программы**
 4. Правый клик → **Открыть** → **Открыть**
 5. Универсальный доступ — как выше
-
-</details>
 
 <details>
 <summary>Вставка не работает, хотя доступ «включён»</summary>
 
 1. Универсальный доступ → выберите MyClipboard → **−**
 2. **+** → Программы → MyClipboard → включите тумблер
-3. Выйдите из MyClipboard (Quit) и откройте снова
+3. Quit MyClipboard и откройте снова
 
 </details>
 
@@ -63,7 +52,7 @@ curl -fsSL https://raw.githubusercontent.com/Lucem-afferens/MyClipboard-dist/mai
 
 ![Три шага: PowerShell → Трей → Ctrl+Alt+V](guides/windows-steps.png)
 
-### 1. Установите
+### Рекомендуется: одна команда
 
 Откройте **PowerShell**, вставьте и нажмите Enter:
 
@@ -71,17 +60,20 @@ curl -fsSL https://raw.githubusercontent.com/Lucem-afferens/MyClipboard-dist/mai
 irm https://raw.githubusercontent.com/Lucem-afferens/MyClipboard-dist/main/install.ps1 | iex
 ```
 
-Если Windows покажет предупреждение SmartScreen: **Подробнее** → **Выполнить в любом случае**.
+Если SmartScreen: **Подробнее** → **Выполнить в любом случае**.
 
-### 2. Найдите иконку
+### Дальше
 
-В **трее** возле часов (стрелка ▲ вверх, если иконки свёрнуты).
+1. Иконка в **трее** возле часов (стрелка ▲, если свёрнуто).
+2. Скопируйте текст → **Ctrl+Alt+V** (панель) или **Ctrl+Shift+V** (цикл).
 
-### 3. Проверьте
+Обновление — снова та же команда.
 
-Скопируйте текст → **Ctrl+Alt+V** (панель) или **Ctrl+Shift+V** (цикл).
+### Альтернатива: ZIP
 
-Обновление — снова та же команда в PowerShell.
+1. [Releases](https://github.com/Lucem-afferens/MyClipboard-dist/releases) → **Assets**
+2. Скачайте **только** `MyClipboard-…-windows-x64.zip` (файл `…-macOS.zip` на Windows не нужен)
+3. Распакуйте и запустите `MyClipboard.exe`
 
 <details>
 <summary>PowerShell запрещает скрипты</summary>
@@ -91,17 +83,6 @@ Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
 ```
 
 затем снова команду установки.
-
-</details>
-
-<details>
-<summary>Установка из ZIP</summary>
-
-1. Откройте [Releases](https://github.com/Lucem-afferens/MyClipboard-dist/releases)
-2. В **Assets** скачайте **только** файл с **`windows-x64`** в имени:  
-   `MyClipboard-…-windows-x64.zip`  
-   Файл `…-macOS.zip` — для Mac, на Windows он не нужен.
-3. Распакуйте и запустите `MyClipboard.exe`
 
 </details>
 

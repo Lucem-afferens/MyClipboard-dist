@@ -1,22 +1,22 @@
-# MyClipboard
+<p align="center">
+  <img src="app-icon.png" width="96" alt="MyClipboard">
+</p>
 
-История буфера обмена. Локально. Без облака и аналитики.
+<h1 align="center">MyClipboard</h1>
 
-## Что умеет
+<p align="center">
+  История буфера обмена · локально · без облака и аналитики
+</p>
 
-- Копируете — появляется в локальной истории; вставка горячей клавишей
-- Поиск, избранное (★), автозапуск при входе
-- macOS: изображения/файлы, цикл ⌘⇧V, заметки и пресеты
-- Windows: тот же набор (Ctrl+Alt+V / Ctrl+Shift+V)
-- Без облака, аккаунта и аналитики; фильтры privacy (менеджеры паролей и скрытый буфер)
+<p align="center">
+  macOS Menu Bar · Windows трей · текст, изображения, файлы
+</p>
 
-| | macOS | Windows |
-|--|--------|---------|
-| Где | Menu Bar | Трей |
-| Hotkey | **⌘⌥V** панель · **⌘⇧V** цикл | **Ctrl+Alt+V** панель · **Ctrl+Shift+V** цикл |
-| Типы | Текст, изображения, файлы | Текст, изображения, файлы |
+---
 
-## Установка за минуту
+## Установка
+
+**Одна команда — самый быстрый и простой способ.** Скрипт сам скачает нужный ZIP и поставит приложение.
 
 ### macOS
 
@@ -24,7 +24,7 @@
 curl -fsSL https://raw.githubusercontent.com/Lucem-afferens/MyClipboard-dist/main/install.sh | bash
 ```
 
-Потом: **Menu Bar** (справа вверху) → **Универсальный доступ** → проверка **⌘⌥V**.
+Затем: **Menu Bar** (справа вверху) → **Системные настройки → Универсальный доступ** → включите MyClipboard → **⌘⌥V**.
 
 ### Windows
 
@@ -32,15 +32,41 @@ curl -fsSL https://raw.githubusercontent.com/Lucem-afferens/MyClipboard-dist/mai
 irm https://raw.githubusercontent.com/Lucem-afferens/MyClipboard-dist/main/install.ps1 | iex
 ```
 
-Потом: иконка в **трее** → **Ctrl+Alt+V** (панель) или **Ctrl+Shift+V** (цикл).
+Затем: иконка в **трее** → **Ctrl+Alt+V**.
+
+Пошагово со схемами: **[INSTALL.md](INSTALL.md)**
 
 ---
 
-Наглядно, со схемами: **[INSTALL.md](INSTALL.md)** · [Releases](https://github.com/Lucem-afferens/MyClipboard-dist/releases)
+## Альтернатива: скачать ZIP
 
-В Releases два ZIP — нужен **один**: `…-macOS.zip` или `…-windows-x64.zip`. Оба качать не надо.
+Если удобнее мышкой — [Releases](https://github.com/Lucem-afferens/MyClipboard-dist/releases) → **Assets** → **один** файл под вашу систему (оба качать не нужно):
+
+| Система | Файл |
+|---------|------|
+| **Mac** | `MyClipboard-…-macOS.zip` |
+| **Windows** | `MyClipboard-…-windows-x64.zip` |
+
+Mac: распакуйте → `MyClipboard.app` в **Программы**. Windows: запустите `MyClipboard.exe`. Дальше — те же шаги с доступом / треем, что выше.
+
+---
+
+## Горячие клавиши
+
+| | Панель истории | Быстрый цикл |
+|--|----------------|--------------|
+| **macOS** | **⌘⌥V** | **⌘⇧V** |
+| **Windows** | **Ctrl+Alt+V** | **Ctrl+Shift+V** |
+
+---
+
+## Требования
 
 | | |
 |--|--|
 | macOS | 14+ |
-| Windows | 10/11 x64 |
+| Windows | 10 / 11, x64 |
+
+Обновление: снова та же команда установки (или новый ZIP из Releases).
+
+Что нового: [release-notes.md](release-notes.md)
