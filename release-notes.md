@@ -18,7 +18,9 @@ Menu Bar (справа вверху) → Универсальный доступ
 irm https://raw.githubusercontent.com/Lucem-afferens/MyClipboard-dist/main/install.ps1 | iex
 ```
 
-Трей → **Ctrl+Shift+V**.
+Трей → **Ctrl+Alt+V** (панель) · **Ctrl+Shift+V** (цикл).
+
+macOS + Windows: текст, изображения, файлы; панель с пресетами/заметками; быстрый цикл.
 
 Пошагово со схемами: [INSTALL.md](https://github.com/Lucem-afferens/MyClipboard-dist/blob/main/INSTALL.md)
 

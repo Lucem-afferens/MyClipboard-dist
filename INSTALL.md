@@ -61,7 +61,7 @@ curl -fsSL https://raw.githubusercontent.com/Lucem-afferens/MyClipboard-dist/mai
 
 ## Windows
 
-![Три шага: PowerShell → Трей → Ctrl+Shift+V](guides/windows-steps.png)
+![Три шага: PowerShell → Трей → Ctrl+Alt+V](guides/windows-steps.png)
 
 ### 1. Установите
 
@@ -79,7 +79,7 @@ irm https://raw.githubusercontent.com/Lucem-afferens/MyClipboard-dist/main/insta
 
 ### 3. Проверьте
 
-Скопируйте текст → **Ctrl+Shift+V**.
+Скопируйте текст → **Ctrl+Alt+V** (панель) или **Ctrl+Shift+V** (цикл).
 
 Обновление — снова та же команда в PowerShell.
 
